@@ -1,0 +1,32 @@
+@startuml Facad_design_pattern
+
+class Cpu
+{
+    +startCup():void;
+    +stopCpu():void;
+}
+class Ram
+{
+    +loadMemory():void;
+}
+class HardDrive
+{
+    +loadDataToRam():void;
+}
+
+class ComputerSystemFacad
+{
+    +startComputerSystem():void;
+    +shurtDownComputerSystem():void;
+}
+
+ComputerSystemFacad --> Ram
+ComputerSystemFacad --> HardDrive
+ComputerSystemFacad --> Cpu
+
+class client 
+{
+    Client():void
+}
+client-->ComputerSystemFacad
+
